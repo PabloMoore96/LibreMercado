@@ -1,0 +1,57 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #fff159;
+}
+header nav .header-nav1 {
+  display: grid;
+  grid-template-areas: "logo input imgdisney" "ubi navbar cuenta";
+  grid-template-columns: 162px minmax(340px, 580px) minmax(350px, 390px);
+  grid-template-rows: 40px 28px;
+  -moz-column-gap: 24px;
+       column-gap: 24px;
+  grid-row-gap: 12px;
+  padding: 8px 10px 12px 10px;
+  justify-content: center;
+}
+header nav .header-nav1 .nav-div {
+  padding: 10px;
+}
+header nav .header-nav1 .nav-div input {
+  width: 465px;
+  display: flex;
+  flex-wrap: nowrap;
+}
+header nav .header-nav1 .nav-div button {
+  width: 38px;
+}
+header nav .header-nav1 .nav-div #buscar {
+  height: 40px;
+  margin: 0;
+  padding: 0;
+}
+header nav .header-nav1 .logo img {
+  height: 34px;
+}
+header nav .header-nav1 .imgdisney img {
+  height: 39px;
+  width: 340px;
+}
+header nav .header-nav1 .ubi {
+  height: 40px;
+}
+header nav .header-nav1 .navbar .lista1 {
+  display: flex;
+}
+header nav .header-nav1 .navbar .lista1 li {
+  text-decoration: none;
+  list-style: none;
+  margin: 5px;
+}
+header nav .header-nav1 .navbar .lista1 a {
+  text-decoration: none;
+  color: #000;
+}/*# sourceMappingURL=styles.css.map */

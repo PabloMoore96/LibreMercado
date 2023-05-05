@@ -1,0 +1,76 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    background-color: #fff159;
+
+    nav{
+
+        .header-nav1{
+            display: grid;
+            grid-template-areas: "logo input imgdisney" "ubi navbar cuenta";
+            grid-template-columns: 162px minmax(340px, 580px) minmax(350px, 390px);
+            grid-template-rows: 40px 28px;
+            column-gap: 24px;
+            grid-row-gap: 12px;
+            padding: 8px 10px 12px 10px;
+            justify-content: center;
+
+            .nav-div{
+                padding: 10px;
+               
+
+                input{
+                    width: 465px;
+                    display: flex;
+                    flex-wrap: nowrap;
+                }
+                button{
+                    width: 38px
+                }
+                #buscar{
+                    height: 40px;
+                    margin: 0;
+                    padding: 0;
+                }
+                
+            }
+    
+            .logo{
+                img{
+                    height: 34px;
+                }
+            }
+
+            .imgdisney{
+                img{
+                    height: 39px;
+                    width: 340px;
+                }
+            }
+
+            
+            .ubi{
+                height: 40px;
+            }
+            .navbar{
+                .lista1{
+                    li{
+                        text-decoration: none;
+                        list-style: none;
+                        margin: 5px;
+                    }
+                    display: flex;
+                    a{
+                        text-decoration: none;
+                        color: #000;
+                    }
+                }
+            }
+        }
+    
+    }
+
+}
