@@ -1,6 +1,8 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: "Proxima Nova",-apple-system,Roboto,Arial,sans-serif,sans-serif;
 }
 
 header{
@@ -17,31 +19,69 @@ header{
             grid-row-gap: 12px;
             padding: 8px 10px 12px 10px;
             justify-content: center;
+            font-size: 14px;
+            font-weight: 300;
+            color: #333;
+            
 
             .nav-div{
-                padding: 10px;
+                align-self: center;
+                flex-wrap: nowrap;
+
                
 
                 input{
-                    width: 465px;
-                    display: flex;
-                    flex-wrap: nowrap;
-                }
-                button{
-                    width: 38px
-                }
-                #buscar{
-                    height: 40px;
+                    position: relative;
+                    z-index: 915;
+                    color: #333;
+                    font-size: 16px;
                     margin: 0;
-                    padding: 0;
+                    border-radius: 2px;
+                    background-color: #fff;
+                    display: flex;
+                    box-shadow: 0 1px 2px 0 rgba(0,0,0,.2);
+                    height: 40px;
+                    width: 100%;
+                    padding: 10px 60px 10px 15px;
+                    border-style: solid;
+                    border-color: rgba(0,0,0,0);
+                    border-width: 1.5px;
+                    
                 }
                 
+                button{
+                    z-index: 930;
+                    width: 40px;
+                    padding: 0;
+                    margin: 0;
+                    background-color: #fff;
+                    border: 0;
+                    cursor: pointer;
+                    box-shadow: 0 1px 2px 0 rgba(0,0,0,.2);
+                    &::before{
+                        font-family: "navigation"
+                    }
+
+                }
+                #buscar{
+                    height: 38px;
+                    margin: 0;
+                    .bi{
+                        font-size: 15px;
+                    }
+                }
+                
+            }
+
+            .input{
+                display: flex;
             }
     
             .logo{
                 img{
-                    height: 34px;
+                    height: 40px;
                 }
+                grid-area: logo;
             }
 
             .imgdisney{
@@ -49,13 +89,72 @@ header{
                     height: 39px;
                     width: 340px;
                 }
+                grid-area: imgdisney;
+                justify-self: end;
             }
 
             
             .ubi{
                 height: 40px;
+                grid-area: ubi;
+                display: flex;
+                .bi{
+                    font-size: 25px;
+                    position: relative;
+                    font-weight: 100;
+                }
+                .text{
+                    text-align: start;
+                    align-self: flex-end;
+                    .txt1{
+                        font-size: 11px;
+                    }
+                }
+                
+
             }
             .navbar{
+
+                grid-area: navbar;
+                .lista1{
+                    li{
+                        text-decoration: none;
+                        list-style: none;
+                        margin: 5px;
+                        position:relative;
+                        
+                        
+                    }
+                    .expand{
+                        
+                        height: 100%;
+                        --clip: polygon(0 0, 100% 0, 100% 0, 0 0);
+                        display: flex;
+
+                        & :hover{
+                            --clip: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+                        }
+                        ul{
+                            display: flex;
+                            clip-path: var(--clip);
+                        }
+                    }
+                    
+                    
+                    display: flex;
+                    a{
+                        height: 40px;
+                        text-decoration: none;
+                        color: #333;
+                        display: flex;
+                        height: 100%;
+                        align-items: center;
+                    }
+                }
+            }
+            .cuenta{
+                grid-area: cuenta;
+                justify-self: end;
                 .lista1{
                     li{
                         text-decoration: none;
@@ -65,8 +164,13 @@ header{
                     display: flex;
                     a{
                         text-decoration: none;
-                        color: #000;
+                        color: #333;
+
+                        .bi{
+                            font-size: 20px;
+                        }
                     }
+                    
                 }
             }
         }

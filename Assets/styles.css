@@ -1,6 +1,8 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  font-family: "Proxima Nova", -apple-system, Roboto, Arial, sans-serif, sans-serif;
 }
 
 header {
@@ -16,25 +18,63 @@ header nav .header-nav1 {
   grid-row-gap: 12px;
   padding: 8px 10px 12px 10px;
   justify-content: center;
+  font-size: 14px;
+  font-weight: 300;
+  color: #333;
 }
 header nav .header-nav1 .nav-div {
-  padding: 10px;
-}
-header nav .header-nav1 .nav-div input {
-  width: 465px;
-  display: flex;
+  align-self: center;
   flex-wrap: nowrap;
 }
+header nav .header-nav1 .nav-div input {
+  position: relative;
+  z-index: 915;
+  color: #333;
+  font-size: 16px;
+  margin: 0;
+  border-radius: 2px;
+  background-color: #fff;
+  display: flex;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+  height: 40px;
+  width: 100%;
+  padding: 10px 60px 10px 15px;
+  border-style: solid;
+  border-color: rgba(0, 0, 0, 0);
+  border-width: 1.5px;
+}
 header nav .header-nav1 .nav-div button {
-  width: 38px;
+  z-index: 930;
+  width: 40px;
+  padding: 0;
+  margin: 0;
+  background-color: #fff;
+  border: 0;
+  cursor: pointer;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+}
+header nav .header-nav1 .nav-div button::before {
+  font-family: "navigation";
 }
 header nav .header-nav1 .nav-div #buscar {
-  height: 40px;
+  height: 38px;
   margin: 0;
-  padding: 0;
+}
+header nav .header-nav1 .nav-div #buscar .bi {
+  font-size: 15px;
+}
+header nav .header-nav1 .input {
+  display: flex;
+}
+header nav .header-nav1 .logo {
+  grid-area: logo;
 }
 header nav .header-nav1 .logo img {
-  height: 34px;
+  height: 40px;
+}
+header nav .header-nav1 .imgdisney {
+  grid-area: imgdisney;
+  justify-self: end;
 }
 header nav .header-nav1 .imgdisney img {
   height: 39px;
@@ -42,6 +82,23 @@ header nav .header-nav1 .imgdisney img {
 }
 header nav .header-nav1 .ubi {
   height: 40px;
+  grid-area: ubi;
+  display: flex;
+}
+header nav .header-nav1 .ubi .bi {
+  font-size: 25px;
+  position: relative;
+  font-weight: 100;
+}
+header nav .header-nav1 .ubi .text {
+  text-align: start;
+  align-self: flex-end;
+}
+header nav .header-nav1 .ubi .text .txt1 {
+  font-size: 11px;
+}
+header nav .header-nav1 .navbar {
+  grid-area: navbar;
 }
 header nav .header-nav1 .navbar .lista1 {
   display: flex;
@@ -50,8 +107,45 @@ header nav .header-nav1 .navbar .lista1 li {
   text-decoration: none;
   list-style: none;
   margin: 5px;
+  position: relative;
+}
+header nav .header-nav1 .navbar .lista1 .expand {
+  height: 100%;
+  --clip: polygon(0 0, 100% 0, 100% 0, 0 0);
+  display: flex;
+}
+header nav .header-nav1 .navbar .lista1 .expand :hover {
+  --clip: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+header nav .header-nav1 .navbar .lista1 .expand ul {
+  display: flex;
+  -webkit-clip-path: var(--clip);
+          clip-path: var(--clip);
 }
 header nav .header-nav1 .navbar .lista1 a {
+  height: 40px;
   text-decoration: none;
-  color: #000;
+  color: #333;
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+header nav .header-nav1 .cuenta {
+  grid-area: cuenta;
+  justify-self: end;
+}
+header nav .header-nav1 .cuenta .lista1 {
+  display: flex;
+}
+header nav .header-nav1 .cuenta .lista1 li {
+  text-decoration: none;
+  list-style: none;
+  margin: 5px;
+}
+header nav .header-nav1 .cuenta .lista1 a {
+  text-decoration: none;
+  color: #333;
+}
+header nav .header-nav1 .cuenta .lista1 a .bi {
+  font-size: 20px;
 }/*# sourceMappingURL=styles.css.map */
