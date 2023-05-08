@@ -178,3 +178,88 @@ header{
     }
 
 }
+
+// Fin Header
+
+// Inicio Main
+
+main{
+    background-color: #ebebeb;
+    
+
+    .carroussel-sec{
+        height: 340px;
+        display: flex;
+        padding: 0 10px;
+        align-items: center;
+        justify-content: center;
+
+        .carroussel-div{
+            max-width: 1200px;
+            position: relative;
+            
+            .img {
+                display: flex;
+                overflow: hidden;
+                cursor: pointer;
+                white-space: nowrap;
+                img{
+                    object-fit: cover;
+                    margin-left: 20px;
+
+                    &:first-child{
+                        margin-left: 0px;
+                    }
+                }
+                
+            }
+
+
+            i{
+                z-index: 1;
+                position: absolute;
+                height: 50px;
+                width:50px;
+                box-shadow: 0 1px 2px 0 rgba(0,0,0,.2);
+                align-self: center;
+                text-align: center;
+                background-color: #fff;
+                border: none;
+                top: 50%;
+                transform: translateY(50%);
+                line-height: 45px;
+                opacity: 0;
+                // display: flex;
+                
+
+                cursor: pointer;
+                &:hover{
+                
+                    opacity: 100;
+                    transition: 1.5s;
+                
+                }
+                
+            }
+            i :first-child{
+                left: -23px;
+            }
+            i :last-child{
+                right: -23px;
+            }
+            .caleft{
+                border-top-right-radius: 100%;
+                border-bottom-right-radius: 100%;
+                left: 0;
+                align-self: center;
+            }
+            .caright{
+                
+                border-top-left-radius: 100%;
+                border-bottom-left-radius: 100%;
+                right: 0;
+            }
+            
+        }
+    }
+}

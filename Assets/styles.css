@@ -148,4 +148,70 @@ header nav .header-nav1 .cuenta .lista1 a {
 }
 header nav .header-nav1 .cuenta .lista1 a .bi {
   font-size: 20px;
+}
+
+main {
+  background-color: #ebebeb;
+}
+main .carroussel-sec {
+  height: 340px;
+  display: flex;
+  padding: 0 10px;
+  align-items: center;
+  justify-content: center;
+}
+main .carroussel-sec .carroussel-div {
+  max-width: 1200px;
+  position: relative;
+}
+main .carroussel-sec .carroussel-div .img {
+  display: flex;
+  overflow: hidden;
+  cursor: pointer;
+  white-space: nowrap;
+}
+main .carroussel-sec .carroussel-div .img img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-left: 20px;
+}
+main .carroussel-sec .carroussel-div .img img:first-child {
+  margin-left: 0px;
+}
+main .carroussel-sec .carroussel-div i {
+  z-index: 1;
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+  align-self: center;
+  text-align: center;
+  background-color: #fff;
+  border: none;
+  top: 50%;
+  transform: translateY(50%);
+  line-height: 45px;
+  opacity: 0;
+  cursor: pointer;
+}
+main .carroussel-sec .carroussel-div i:hover {
+  opacity: 100;
+  transition: 1.5s;
+}
+main .carroussel-sec .carroussel-div i :first-child {
+  left: -23px;
+}
+main .carroussel-sec .carroussel-div i :last-child {
+  right: -23px;
+}
+main .carroussel-sec .carroussel-div .caleft {
+  border-top-right-radius: 100%;
+  border-bottom-right-radius: 100%;
+  left: 0;
+  align-self: center;
+}
+main .carroussel-sec .carroussel-div .caright {
+  border-top-left-radius: 100%;
+  border-bottom-left-radius: 100%;
+  right: 0;
 }/*# sourceMappingURL=styles.css.map */
