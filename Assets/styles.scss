@@ -1,3 +1,9 @@
+$blue: #1259c3;
+$lightblue: #3483fa;
+$yellow:#fff159;
+$graybg: #ebebeb;
+$green:#00a650;
+
 *{
     margin: 0;
     padding: 0;
@@ -6,7 +12,7 @@
 }
 
 header{
-    background-color: #fff159;
+    background-color: $yellow;
 
     nav{
 
@@ -98,6 +104,7 @@ header{
                 height: 40px;
                 grid-area: ubi;
                 display: flex;
+                color: #444;
                 .bi{
                     font-size: 25px;
                     position: relative;
@@ -145,7 +152,7 @@ header{
                     a{
                         height: 40px;
                         text-decoration: none;
-                        color: #333;
+                        color: #444;
                         display: flex;
                         height: 100%;
                         align-items: center;
@@ -164,7 +171,7 @@ header{
                     display: flex;
                     a{
                         text-decoration: none;
-                        color: #333;
+                        color: #444;
 
                         .bi{
                             font-size: 20px;
@@ -184,7 +191,18 @@ header{
 // Inicio Main
 
 main{
-    background-color: #ebebeb;
+
+    a{
+        color: $lightblue;
+        text-decoration: none;
+        
+        &:hover{
+            color: $blue;
+        }
+    }
+
+    // Carroussel
+    background-color: $graybg;
     
 
     .carroussel-sec{
@@ -260,4 +278,166 @@ main{
             }
         }
     }
+    // medios de pago
+    .medios-pago{
+        display: flex;
+        padding: 50px;
+        justify-content: center;
+
+        .tarjetas{
+            background-color: #fff;
+            width: 1200px;
+            border-radius: 5px;
+            display: grid;
+            grid-template-columns: 9fr 1fr;
+            cursor: pointer;
+
+            
+            .tarj{
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+                box-shadow: 0 1px 2px 0 rgba(0,0,0,.1);
+
+                .t{
+                    display: flex;
+                    align-items: center;
+                    padding: 20px;
+                    #tarjeta{
+                        padding-left: 10px;
+                        display: flex;
+                        flex-direction: column;
+                        align-items:start;
+                        a{
+                            color: $lightblue;
+                            text-decoration: none;
+                            font-size: 12px;
+                            padding: 0;
+                            &:hover{
+                                color: $blue;
+                            }
+                        }
+                    }
+                }
+            }
+            .mas{
+                box-shadow: 0 1px 2px 0 rgba(0,0,0,.1);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+        }
+    }
+
+    // ofertas
+
+    .ofertas{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        .ofTitulo{
+            width: 1200px;
+            display: flex;
+            padding-top: 10px;
+            padding-bottom: 20px;
+            align-items: baseline;
+            h1{
+                color: #666;
+                font-weight: 300;
+                font-size: 26px;
+                padding-right: 10px;
+            }
+
+
+        }
+       
+        .ofCarroussel{
+            align-items: center;
+            position: relative;
+            display: flex;
+            width: 1200px;
+            button{
+                position: absolute;
+                cursor: pointer;
+                top: 50%;
+                height: 60px;
+                width: 60px;
+                background-color: #fff;
+                border-radius: 100%;
+                border: none;
+                box-shadow: 0 1px 2px 0 rgba(0,0,0,.2);
+
+                &:hover{
+                    box-shadow: 3px 5px 3px 0 rgba(0,0,0,.2);
+                }
+            }
+            .oleft{
+                left: 0px;
+            }
+            .oright{
+                right: 0px;
+            }
+            .bi{
+                color: $lightblue;
+            }
+            .divCarOf{
+                display: grid;
+                overflow: hidden;
+                // justify-content: center;
+                grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+                
+                .carr-tarjeta{
+                    width:224px;
+                    margin: 8px;
+                    border-radius: 5px;
+                    border: none;
+                    box-shadow: 0 1px 3px 0 rgba(0,0,0,.2);
+                    background-color: #fff;
+                    cursor: pointer;
+
+                    &:hover{
+                        box-shadow: 3px 5px 3px 0 rgba(0,0,0,.2);
+                    }
+                    
+                    img{
+                        border-top-left-radius: 5px;
+                        border-top-right-radius: 5px;
+                        box-shadow: 0 1px 2px 0 rgba(0,0,0,.2);
+                    }
+                    
+                    .tarjInfo{
+                        display: flex;
+                        flex-direction: column;
+                        padding: 10px;
+                        height: auto;
+                        margin: 0;
+
+                        .precio-viejo{
+                            
+                            span{
+                                font-size: 14px;
+                                text-decoration: line-through;
+                            }
+                        }
+                        .preciodesc{
+                            display: flex;
+                            align-items: baseline;
+                            .precio{
+                                font-size: 26px;
+                            }
+                        }
+
+                        .v{
+                            color: $green;
+                            font-size: 14px;
+                        }
+
+                    }
+                    
+                }
+            }
+        }
+    }
+
 }
