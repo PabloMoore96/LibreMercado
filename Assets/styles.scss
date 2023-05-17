@@ -28,6 +28,8 @@ header{
             font-size: 14px;
             font-weight: 300;
             color: #333;
+
+        
             
 
             .nav-div{
@@ -157,7 +159,17 @@ header{
                         height: 100%;
                         align-items: center;
                     }
+                    // @media (max-width: 581px){
+                    //     .hidden{
+                    //         display: none;
+                    //     }
+                    //     display: grid;
+                    //     grid-template-columns: 1fr 1fr 1fr;
+                    //     grid-template-rows: 33px;
+    
+                    // }
                 }
+                
             }
             .cuenta{
                 grid-area: cuenta;
@@ -178,6 +190,53 @@ header{
                         }
                     }
                     
+                }
+            }
+            @media (max-width: 987px){
+                display:grid;
+                grid-template-areas: "logo input" "imgdisney ubi" "navbar cuenta";
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 40px 40px 40px;
+                justify-content: center;
+    
+                .logo{
+                    display: flex;
+                    justify-content: center;
+                }
+                .imgdisney{
+                    display: flex;
+                    justify-content: flex-start;
+                    margin-right: 60px;
+                }
+                .ubi{
+                    display: flex;
+                    justify-content: center;
+                }
+                
+                .navbar{
+                    display: flex;
+                    height: 33px;
+                    align-items: baseline;
+                    justify-self: flex-end;
+                }
+                .lista1{
+                    display: flex;
+                    align-items: baseline;
+                    justify-content: flex-start;
+                }
+                .cuenta{
+                    width: max-content;
+                    text-align: left;
+                }
+    
+            }
+            @media (max-width: 782px){
+                display: flex;
+                flex-direction: column;
+                .imgdisney{
+                    display: flex;
+                    justify-content: flex-start;
+                    margin: 0;
                 }
             }
         }
@@ -210,18 +269,21 @@ main{
         display: flex;
         align-items: center;
         justify-content: center;
+        
 
         .carroussel-div{
             height: 340px;
             width: 100vw;
             position: relative;
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             
+        
             
             .img {
+                display: flex;
                 
-                max-width: 1200px;
+                // max-width: 1200px;
                 overflow: hidden;
                 cursor: pointer;
                 white-space: nowrap;
@@ -229,8 +291,11 @@ main{
 
 
                 img{
+                    justify-self: center;
                     object-fit: cover;
                     margin-left: 20px;
+
+                    
 
                     &:first-child{
                         margin-left: 0px;
@@ -249,6 +314,7 @@ main{
                 box-shadow: 0 1px 2px 0 rgba(0,0,0,.2);
                 align-self: center;
                 background-color: #fff;
+                position: absolute;
                 border: none;
                 top: 50%;
                 line-height: 45px;
@@ -260,11 +326,13 @@ main{
             
             .caleft{
                 z-index: 2;
+                right: 0;
                 border-top-right-radius: 100%;
                 border-bottom-right-radius: 100%;
             }
             .caright{
                 z-index: 2;
+                left: 0;
                 border-top-left-radius: 100%;
                 border-bottom-left-radius: 100%;
                 
@@ -277,6 +345,34 @@ main{
                 transition: 0.5s;
             }
         }
+        @media (max-width: 1000px){
+            height: 240px;
+            
+            .carroussel-div{
+                height: 240px;
+
+                button{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    height: 35px;
+                    width: 35px ;
+                    top: 45%;
+                }
+            }
+
+        }
+        @media (max-width: 720px){
+            height: 170px;
+            
+            .carroussel-div{
+                height: 170px;
+                button{
+                    top: 40%;
+                }
+            }
+        }
+
     }
     // medios de pago
     .medios-pago{
@@ -297,6 +393,17 @@ main{
                 display: grid;
                 grid-template-columns: 1fr 1fr 1fr 1fr;
                 box-shadow: 0 1px 2px 0 rgba(0,0,0,.1);
+
+                @media (max-width: 987px){
+                    grid-template-columns: 1fr 1fr;
+                    grid-template-rows: 92px 92px;
+
+                }
+                @media (max-width: 540px){
+                    display: flex;
+                    flex-direction: column;
+
+                }
 
                 .t{
                     display: flex;
@@ -342,6 +449,19 @@ main{
             padding-top: 10px;
             padding-bottom: 20px;
             align-items: baseline;
+            @media (max-width: 1200px){
+                width: 960px;
+            }
+            @media (max-width: 960px){
+                width: 720px;
+            }
+            @media (max-width: 720px){
+                width: 480px;
+            }
+            @media (max-width: 480px){
+                width: 240px;
+            }
+
             h1{
                 color: #666;
                 font-weight: 300;
@@ -357,6 +477,18 @@ main{
             position: relative;
             display: flex;
             width: 1200px;
+            @media (max-width: 1200px){
+                width: 960px;
+            }
+            @media (max-width: 960px){
+                width: 720px;
+            }
+            @media (max-width: 720px){
+                width: 480px;
+            }
+            @media (max-width: 480px){
+                width: 240px;
+            }
             button{
                 position: absolute;
                 cursor: pointer;

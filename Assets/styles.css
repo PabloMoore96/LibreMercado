@@ -150,6 +150,55 @@ header nav .header-nav1 .cuenta .lista1 a {
 header nav .header-nav1 .cuenta .lista1 a .bi {
   font-size: 20px;
 }
+@media (max-width: 987px) {
+  header nav .header-nav1 {
+    display: grid;
+    grid-template-areas: "logo input" "imgdisney ubi" "navbar cuenta";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 40px 40px 40px;
+    justify-content: center;
+  }
+  header nav .header-nav1 .logo {
+    display: flex;
+    justify-content: center;
+  }
+  header nav .header-nav1 .imgdisney {
+    display: flex;
+    justify-content: flex-start;
+    margin-right: 60px;
+  }
+  header nav .header-nav1 .ubi {
+    display: flex;
+    justify-content: center;
+  }
+  header nav .header-nav1 .navbar {
+    display: flex;
+    height: 33px;
+    align-items: baseline;
+    justify-self: flex-end;
+  }
+  header nav .header-nav1 .lista1 {
+    display: flex;
+    align-items: baseline;
+    justify-content: flex-start;
+  }
+  header nav .header-nav1 .cuenta {
+    width: -moz-max-content;
+    width: max-content;
+    text-align: left;
+  }
+}
+@media (max-width: 782px) {
+  header nav .header-nav1 {
+    display: flex;
+    flex-direction: column;
+  }
+  header nav .header-nav1 .imgdisney {
+    display: flex;
+    justify-content: flex-start;
+    margin: 0;
+  }
+}
 
 main {
   background-color: #ebebeb;
@@ -172,16 +221,17 @@ main .carroussel-sec .carroussel-div {
   width: 100vw;
   position: relative;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 }
 main .carroussel-sec .carroussel-div .img {
-  max-width: 1200px;
+  display: flex;
   overflow: hidden;
   cursor: pointer;
   white-space: nowrap;
   z-index: 1;
 }
 main .carroussel-sec .carroussel-div .img img {
+  justify-self: center;
   -o-object-fit: cover;
      object-fit: cover;
   margin-left: 20px;
@@ -196,6 +246,7 @@ main .carroussel-sec .carroussel-div button {
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
   align-self: center;
   background-color: #fff;
+  position: absolute;
   border: none;
   top: 50%;
   line-height: 45px;
@@ -204,17 +255,46 @@ main .carroussel-sec .carroussel-div button {
 }
 main .carroussel-sec .carroussel-div .caleft {
   z-index: 2;
+  right: 0;
   border-top-right-radius: 100%;
   border-bottom-right-radius: 100%;
 }
 main .carroussel-sec .carroussel-div .caright {
   z-index: 2;
+  left: 0;
   border-top-left-radius: 100%;
   border-bottom-left-radius: 100%;
 }
 main .carroussel-sec .carroussel-div:hover button {
   opacity: 100;
   transition: 0.5s;
+}
+@media (max-width: 1000px) {
+  main .carroussel-sec {
+    height: 240px;
+  }
+  main .carroussel-sec .carroussel-div {
+    height: 240px;
+  }
+  main .carroussel-sec .carroussel-div button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 35px;
+    width: 35px;
+    top: 45%;
+  }
+}
+@media (max-width: 720px) {
+  main .carroussel-sec {
+    height: 170px;
+  }
+  main .carroussel-sec .carroussel-div {
+    height: 170px;
+  }
+  main .carroussel-sec .carroussel-div button {
+    top: 40%;
+  }
 }
 main .medios-pago {
   display: flex;
@@ -233,6 +313,18 @@ main .medios-pago .tarjetas .tarj {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+}
+@media (max-width: 987px) {
+  main .medios-pago .tarjetas .tarj {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 92px 92px;
+  }
+}
+@media (max-width: 540px) {
+  main .medios-pago .tarjetas .tarj {
+    display: flex;
+    flex-direction: column;
+  }
 }
 main .medios-pago .tarjetas .tarj .t {
   display: flex;
@@ -272,6 +364,26 @@ main .ofertas .ofTitulo {
   padding-bottom: 20px;
   align-items: baseline;
 }
+@media (max-width: 1200px) {
+  main .ofertas .ofTitulo {
+    width: 960px;
+  }
+}
+@media (max-width: 960px) {
+  main .ofertas .ofTitulo {
+    width: 720px;
+  }
+}
+@media (max-width: 720px) {
+  main .ofertas .ofTitulo {
+    width: 480px;
+  }
+}
+@media (max-width: 480px) {
+  main .ofertas .ofTitulo {
+    width: 240px;
+  }
+}
 main .ofertas .ofTitulo h1 {
   color: #666;
   font-weight: 300;
@@ -283,6 +395,26 @@ main .ofertas .ofCarroussel {
   position: relative;
   display: flex;
   width: 1200px;
+}
+@media (max-width: 1200px) {
+  main .ofertas .ofCarroussel {
+    width: 960px;
+  }
+}
+@media (max-width: 960px) {
+  main .ofertas .ofCarroussel {
+    width: 720px;
+  }
+}
+@media (max-width: 720px) {
+  main .ofertas .ofCarroussel {
+    width: 480px;
+  }
+}
+@media (max-width: 480px) {
+  main .ofertas .ofCarroussel {
+    width: 240px;
+  }
 }
 main .ofertas .ofCarroussel button {
   position: absolute;
