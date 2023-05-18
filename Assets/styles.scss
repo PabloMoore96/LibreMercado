@@ -86,10 +86,15 @@ header{
             }
     
             .logo{
+                display: flex;
                 img{
                     height: 40px;
                 }
                 grid-area: logo;
+                .expand-nav{
+                    visibility:hidden;
+                    z-index: 3;
+                }
             }
 
             .imgdisney{
@@ -159,15 +164,13 @@ header{
                         height: 100%;
                         align-items: center;
                     }
-                    // @media (max-width: 581px){
-                    //     .hidden{
-                    //         display: none;
-                    //     }
-                    //     display: grid;
-                    //     grid-template-columns: 1fr 1fr 1fr;
-                    //     grid-template-rows: 33px;
+                    @media (max-width: 581px){
+                        display: grid;
+                        grid-template-columns: 1fr 1fr 1fr 1fr;
+                        grid-template-rows: 33px;
+                        margin-bottom: 15 px;
     
-                    // }
+                    }
                 }
                 
             }
@@ -215,7 +218,6 @@ header{
                 
                 .navbar{
                     display: flex;
-                    height: 33px;
                     align-items: baseline;
                     justify-self: flex-end;
                 }
@@ -233,10 +235,26 @@ header{
             @media (max-width: 782px){
                 display: flex;
                 flex-direction: column;
+                grid-template-rows: 40px 40px 40px 40px 80px 40px;
+                .logo{
+                    width: 100vw;
+                    display: flex;
+                    justify-content: space-evenly;
+                    .expand-nav{
+                        visibility: visible;
+                        font-size: 14px;
+                        border-radius: 3px;
+                        box-shadow: 0 1px 2px 0 rgba(0,0,0,.2);
+                        background-color: #fff;
+                    }
+                }
                 .imgdisney{
                     display: flex;
                     justify-content: flex-start;
                     margin: 0;
+                }
+                .hide{
+                    display:none;
                 }
             }
         }
@@ -326,13 +344,13 @@ main{
             
             .caleft{
                 z-index: 2;
-                right: 0;
+                left: 0;
                 border-top-right-radius: 100%;
                 border-bottom-right-radius: 100%;
             }
             .caright{
                 z-index: 2;
-                left: 0;
+                right: 0;
                 border-top-left-radius: 100%;
                 border-bottom-left-radius: 100%;
                 

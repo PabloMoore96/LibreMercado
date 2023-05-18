@@ -36,3 +36,30 @@ function mover_izquierda(){
 
 rightImg.addEventListener("click", mover_derecha);
 leftImg.addEventListener("click", mover_izquierda);
+
+const navBtn = document.querySelector('.expand-nav');
+const elements = document.querySelectorAll('#hidden')
+
+navBtn.addEventListener('click', () => {
+    
+    if(elements.classList === ('hide')){
+        for (let i = 0; i < elements.length; i++) {
+            elements[i].classList.toggle('h')
+            elements[i].classList.remove('hide')
+    
+            
+        }
+    }else{
+        for (let i = 0; i < elements.length; i++) {
+            elements[i].classList.toggle('hide')
+            elements[i].classList.remove('h')
+    
+            
+        }
+    }
+    
+    
+    
+    
+
+})

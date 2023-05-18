@@ -24,22 +24,24 @@
 
         <div class="nav-div logo">
           <img src="./Assets/Img/logolibremercado-02-01.png" alt="Logo">
-          <button ><img src="" alt="">a</button>
+          
+          <button class="expand-nav">
+            <img src="" alt=""><i class="bi bi-list"></i></button>
         </div>
 
-        <div class="nav-div input">
+        <div class="nav-div input hide" id="hidden">
 
           <input type="search" name="Buscar" id="buscar" placeholder="Buscar productos, marcas y más…">
           <button id="buscar"><i class="bi bi-search"></i></button>
         </div>
 
-        <div class="nav-div imgdisney">
+        <div class="nav-div imgdisney hide" id="hidden">
           <img src="https://http2.mlstatic.com/D_NQ_773701-MLA54334638216_032023-OO.webp"
             title="Suscribite al nivel 6 con beneficios exclusivos"
             alt="Suscribite al nivel 6 con beneficios exclusivos">
         </div>
 
-        <div class="nav-div ubi">
+        <div class="nav-div ubi hide" id="hidden">
           <div class="ico"><i class="bi bi-geo-alt"></i></div>
           <div class="text">
             <div class="txt1">Enviar a</div>
@@ -48,17 +50,11 @@
 
         </div>
 
-        <div class="nav-div navbar">
+        <div class="nav-div navbar hide" id="hidden">
 
           <ul class="lista1">
             <li class="expand"><a href="#">Categorías <i style='font-size:15px' class='fas'>&#xf107;</i></a>
-              <!-- <ul class="lidesp">
-                <li><a href="#">Categoría1</a></li>
-                <li><a href="#">Categoría2</a></li>
-                <li><a href="#">Categoría3</a></li>
-                <li><a href="#">Categoría4</a></li>
-                <li><a href="#">Categoría5</a></li>
-              </ul> -->
+             
             </li>
             <li><a href="#">Ofertas</a></li>
             <li><a href="#">Historial</a></li>
@@ -70,9 +66,9 @@
           </ul>
 
         </div>
-        <div class="nav-div cuenta">
+        <div class="nav-div cuenta hide" id="hidden">
 
-          <ul class="lista1">
+          <ul class="lista1 ">
             <li><a href="#" aria-expanded="false">User <i style='font-size:15px' class='fas'>&#xf107;</i></a></li>
             <li><a href="#">Mis Compras</a></li>
             <li><a href="#">Favoritos <i style='font-size:15px' class='fas'>&#xf107;</i></a></li>
