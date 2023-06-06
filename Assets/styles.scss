@@ -589,5 +589,93 @@ main{
             }
         }
     }
+    .prefooter{
+        background-color: #fff;
+        padding: 40px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+        // justify-items: center;
+        .aside1{
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            padding: 10px;
+            img{
+                height: 46px;
+            }
+            .prefooterdiv{
+                padding: 40px;
+                background-color: #fff;
+                width: 400px;
+                h2{
+                    color: #000;
+                    font-weight: 300;
+                    font-size: 22px;
+                    margin-top: 10px;
+                    margin-bottom: 10px;
+                }
+                p{
+                    color: #666;
+                    font-weight: 300;
+                    font-size: 15px;
+                    margin-bottom: 10px;
+                }
+            }
+            @media (max-width: 750px){
+                flex-direction: column;
+                align-items: center;
+            }
+            @media (max-width: 475px){
+                .prefooterdiv{
+                    width: 250px;
+                }
+            }
+            
+            
+        }
+        .aside2{
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            .prefooterdiv2{
+                padding: 30px;
+                border-radius: 5px;
+                border: 0.5px;
+                box-shadow: 0 1px 3px 0 rgba(0,0,0,.2);
+                background-color: #fff;
+                display: flex;
+                flex-direction: column;
+                width: 650px;
+                margin: 25px;
+            }
+            @media (max-width: 1000px){
+                flex-direction: column;
+                align-items: center;
+                .prefooterdiv2{
+                    height: 132px;
+                    align-items: center;
+                    justify-content: center;
+                    width: 400px;
+                }
+            
+            
+            }
+            @media (max-width: 475px){
+                .prefooterdiv2{
+                    width: 250px;
+                }
+            }
+            
+            // .pre21{
+                
+            // }
+            // .pre22{
+                
+            // }
+            
+        }
+    }
 
 }
